@@ -107,7 +107,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-1 text-sm font-medium text-slate-600 sm:text-base">
-            Senior Obstetrician &amp; Gynaecologist | Laparoscopic and Fertility Specialist
+            Senior Obs &amp; Gynaecologist | Fertility consultant & laparoscopic surgeon
           </p>
 
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
@@ -197,10 +197,10 @@ export default function Hero() {
               </p>
 
               <p className="mt-1 text-xs text-white/90 sm:text-sm">
-                Senior Obstetrician &amp; Gynaecologist
+                Senior Obs &amp; Gynaecologist
               </p>
               <p className="mt-1 text-xs text-white/90 sm:text-sm">
-                Laparoscopic and Fertility Specialist
+                Fertility consultant & laparoscopic surgeon
               </p>
             </div>
 

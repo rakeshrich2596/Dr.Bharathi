@@ -1,113 +1,214 @@
 
-import { useState, useEffect } from "react";
-import { ArrowLeft, ArrowRight, Quote, Star, UserRound } from "lucide-react";
+import { useState, useEffect, useMemo } from "react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Quote,
+  Star,
+  UserRound,
+  ExternalLink,
+} from "lucide-react";
 
+// Google 5-star reviews shared by the user
 const testimonials = [
   {
-    name: "Monisha Mathiyalagan",
+    name: "Thamizh",
+    date: "2 months ago",
     review:
-      "Bharathi fertility center- one of the BEST hospital for fertility treatment.Hospital environment is very clean and calm well maintained by staff. Dr.Bharathi mam is the best doctor I h've known who takes care of patients in the best way....",
+      "I am happy to share that I got positive in my first IUI treatment. First thanks to God and then Dr Bharathi. She explains to the point. Very friendly atmosphere. Thank you Bharati Fertility Center.",
+    profile:
+      "https://www.google.com/maps/contrib/100322749911948840743/reviews?hl=en-IN",
   },
   {
-    name: "Suganya c",
+    name: "Sunil S",
+    date: "4 years ago",
     review:
-      "I had a wonderful hospitality at bharati fertility center.The nurses were very helpful and polite to give the services.I had a wonderful experience here even though I am meeting first time to this center.",
+      "Very good services. Doctor is very friendly and one can be outspoken to her. Nurse and faculty were very supportive. They took care very well. Doctor was very helpful in making us understand the problem. She was patiently answering all queries. Very much suggested to get treated here.",
+    profile:
+      "https://www.google.com/maps/contrib/107153273257623479840/reviews?hl=en-IN",
   },
   {
-    name: "Sathishkumar Theerthagiri",
+    name: "DurgaVijay",
+    date: "2 months ago",
     review:
-      "First of all I like to thank Dr.Bharathi mam and staff's. I went treatment for pregnancy after miscarriage for PCOD problem Dr.Bharathi mam is lovely speak with at every time.The procedure and level of treatment is explained clearly.",
+      "I went there for PCOS problem. My cycles have become much better with the medicines and the diet and exercise by Dr Bharathi. I recommend this doctor.",
+    profile:
+      "https://www.google.com/maps/contrib/108673706618761921648/reviews?hl=en-IN",
   },
   {
-    name: "priya suriya",
+    name: "Sathiya Narayanan",
+    date: "1 year ago",
     review:
-      "We are very happy to announce that our dreams have  come true, we are very greatful to Dr Bharathi and her team , the way they gave us confidence and immense support . we glad to say that we have approached the right team at right time.",
+      "Good IVF center. We consulted Dr. V Bharathi. She is good and caring towards my wife. Patient hospitality is very good. The hospital sisters and staff are very kind, friendly and caring.",
+    profile:
+      "https://www.google.com/maps/contrib/114094775706659847048/reviews?hl=en-IN",
   },
   {
-    name: "Gowri Dhakshayani",
+    name: "Saranya Naveen",
+    date: "4 years ago",
     review:
-      "I am incredibly grateful to Dr. Bharati and the entire medical team at Bharati Fertility Centre for their exceptional care and support throughout my journey to motherhood.\n\nDr. Bharati played a crucial role in helping me conceive through IUI in the very first attempt. Her expertise and guidance made all the difference. She answers all our queries very patiently and explained all the procedures in detail.",
+      "I am Saranya, married 2 years before, met Dr Bharathi mam in a camp conducted in our area. Mam suggested medications and clarified my doubts. I am very happy to say I'm pregnant now. Staffs are friendly, caring and good. Positive environment. Thanks to Mam and team.",
+    profile:
+      "https://www.google.com/maps/contrib/114527512011189215566/reviews?hl=en-IN",
   },
   {
-    name: "Ramya B",
+    name: "Harshini",
+    date: "2 months ago",
     review:
-      "This is Ramya, I like to convey my heart full thanks to Dr Bharathi mam and Dr Rashetha mam.\n\nVery friendly and carrying staff and the duty nurses.\n\nRashetha mam, We never forget your motivation, advice, treatment, care.\n\nRashetha mam and Bharathi mam very very very thank you so much.",
+      "Had a great experience. The doctor listened well and gave honest advice. Felt comfortable throughout. Thank you Dr. Bharathi ma'am. Bharati Fertility Centre.",
+    profile:
+      "https://www.google.com/maps/contrib/117810331567263249134/reviews?hl=en-IN",
   },
   {
-    name: "Pavithra Ruban",
+    name: "Vanithadurairajwin",
+    date: "2 months ago",
     review:
-      "First of all we thank Dr.bharathi mam. We are planning for pregnancy, after visiting bharathi fertility centre my self and my husband got hope and positive thoughts about pregnancy. We are happy to inform that now I am pregnant. Thanks to bharathi mam and all staffs for their support.",
+      "I am extremely wonderful hospital. Dr. Bharathi mam was good doctor.",
+    profile:
+      "https://www.google.com/maps/contrib/110020862386306289973/reviews?hl=en-IN",
   },
   {
-    name: "shruthi shobana",
+    name: "Durga Vijay",
+    date: "2 months ago",
     review:
-      "I had an exceptional experience at this hospital! The doctors and staff were incredibly supportive,taking the time to explain everthing in detail and addressing all my concerns.Their follow-up care was impressive and greatly appreciated.I highly recommend this hospital ,particularly for those seeking gynecological care.The team's dedication and compassion are truly commendable.Hats off to the entire team! Thank you for your outstanding service!.",
-  },
-  {
-    name: "Brinda S.V",
-    review:
-      "I have been trying to get pregnant for last 6 years after visit to Bharathi Fertility Center now I am pregnant with twins.All the treatment and diagnosis are perfect for success.\n\nThank you Dr.Bharathi Mam and All the staffs",
-  },
-  {
-    name: "A Vijayakumar",
-    review:
-      "My name kaleeswari.After 13years we got positive result.Thank you Dr.bharathi mam and Dr Rashetha mam.give good treatment.1st cycle of ivf treatment we got good result.Highy recommended 👏👍bharati fertility center.",
-  },
-  {
-    name: "Arunraj Govindaraj",
-    review:
-      "Best treatment center with the most caring doctors, nurses, and staff. They explain every procedure clearly, provide excellent support throughout the journey, and create a positive, comforting environment that gives hope and confidence. Thank you for all your care, encouragement, and support in helping us on our pregnancy journey. We are truly grateful.",
-  },
-  {
-    name: "Prasana Lakshmi Ramesh",
-    review:
-      "My sister in law have been trying to get pregnant for last 6 years after visit to Bharathi Fertility Center now she is pregnant with twins.All the treatment and diagnosis are perfect for success.",
-  },
-  {
-    name: "Patient review",
-    review:
-      "I visited this clinic 4 years ago for a pregnancy consultation. After following the doctor's guidance, I got pregnant the next month. She is very friendly, professional, and explains everything clearly. I was blessed with a healthy baby girl who is now 4 years old. Recently, I came back for a general consultation, and I am happy to visit this clinic again. The staff are also very kind, caring, and supportive. Thank you to the doctor and the entire team for the excellent care and service throughout the years.",
+      "The treatment was good. Quick consultations, not much waiting time. Dr Bharathi treated me for white discharge. Thank you.",
+    profile:
+      "https://www.google.com/maps/contrib/104892176322077560932/reviews?hl=en-IN",
   },
 ];
 
+const googleReviewsUrl =
+  "https://www.google.com/search?q=Bharati+Fertility+Center#lrd=0x3a526736f92c304f:0x7c786b1bcbc882b7,1,,,,";
+
+// Individual testimonial card
+function TestimonialCard({ item }) {
+  return (
+    <article className="flex h-full flex-col rounded-2xl border border-[#C92855]/10 bg-white p-5 shadow-[0_8px_30px_rgba(75,18,61,0.07)] transition-shadow duration-300 hover:shadow-[0_14px_35px_rgba(75,18,61,0.12)] sm:p-6 lg:p-7">
+
+      {/* Stars and quote */}
+      <div className="mb-5 flex items-center justify-between">
+        <div className="flex items-center gap-1">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <Star
+              key={star}
+              size={16}
+              fill="#E9A51A"
+              color="#E9A51A"
+            />
+          ))}
+        </div>
+
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FCE7F3] text-[#C92855]">
+          <Quote size={19} />
+        </div>
+      </div>
+
+      {/* Complete review - no internal scrollbar */}
+      <p className="flex-1 whitespace-pre-line text-sm leading-7 text-gray-600 sm:text-[15px]">
+        “{item.review}”
+      </p>
+
+      <div className="my-5 h-px w-full bg-[#F1E4ED]" />
+
+      {/* Reviewer */}
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#FCE7F3] text-[#064F63]">
+            <UserRound size={21} />
+          </div>
+
+          <div className="min-w-0">
+            <h3 className="truncate text-sm font-bold text-[#064F63]">
+              {item.name}
+            </h3>
+            <p className="mt-1 text-xs text-gray-500">
+              {item.date}
+            </p>
+          </div>
+        </div>
+
+        {/* <a
+          href={item.profile}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex shrink-0 items-center gap-1 text-xs font-semibold text-[#C92855] hover:text-[#064F63]"
+        >
+          Google
+          <ExternalLink size={13} />
+        </a> */}
+      </div>
+    </article>
+  );
+}
+
 export default function Testimonials() {
+  const [cardsPerView, setCardsPerView] = useState(2);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [cardsPerView, setCardsPerView] = useState(3);
   const [paused, setPaused] = useState(false);
 
+  // Responsive cards: 2 desktop, 1 mobile
   useEffect(() => {
     const updateView = () => {
-      setCardsPerView(
-        window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3
-      );
+      setCardsPerView(window.innerWidth < 768 ? 1 : 2);
     };
 
     updateView();
+
     window.addEventListener("resize", updateView);
-    return () => window.removeEventListener("resize", updateView);
+
+    return () => {
+      window.removeEventListener("resize", updateView);
+    };
   }, []);
 
-  const maxIndex = testimonials.length - cardsPerView;
+  // Divide reviews into slides
+  const slides = useMemo(() => {
+    const result = [];
 
+    for (
+      let i = 0;
+      i < testimonials.length;
+      i += cardsPerView
+    ) {
+      result.push(testimonials.slice(i, i + cardsPerView));
+    }
+
+    return result;
+  }, [cardsPerView]);
+
+  const maxIndex = slides.length - 1;
+
+  // Keep active slide valid when screen size changes
   useEffect(() => {
-    setActiveIndex((current) => Math.min(current, maxIndex));
+    setActiveIndex((current) =>
+      Math.min(current, maxIndex)
+    );
   }, [maxIndex]);
 
+  // Automatic slide every 5 seconds
   useEffect(() => {
-    if (paused) return;
+    if (paused || slides.length <= 1) return;
 
     const timer = window.setInterval(() => {
-      setActiveIndex((current) => (current >= maxIndex ? 0 : current + 1));
-    }, 4500);
+      setActiveIndex((current) =>
+        current >= maxIndex ? 0 : current + 1
+      );
+    }, 5000);
 
     return () => window.clearInterval(timer);
-  }, [paused, maxIndex]);
+  }, [paused, maxIndex, slides.length]);
 
-  const next = () =>
-    setActiveIndex((current) => (current >= maxIndex ? 0 : current + 1));
+  const next = () => {
+    setActiveIndex((current) =>
+      current >= maxIndex ? 0 : current + 1
+    );
+  };
 
-  const previous = () =>
-    setActiveIndex((current) => (current <= 0 ? maxIndex : current - 1));
+  const previous = () => {
+    setActiveIndex((current) =>
+      current <= 0 ? maxIndex : current - 1
+    );
+  };
 
   return (
     <section
@@ -117,106 +218,121 @@ export default function Testimonials() {
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setPaused(false);
+        }
       }}
     >
+      {/* Background decoration */}
       <div className="pointer-events-none absolute -left-24 top-20 h-64 w-64 rounded-full bg-[#C92855]/[0.06] blur-3xl" />
+
       <div className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#0875C9]/[0.07] blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+        {/* Heading */}
         <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#C92855]/15 bg-white px-4 py-2">
             <Quote size={16} className="text-[#C92855]" />
+
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#064F63]">
-              Patient Testimonials
+              Patient Testimonials 
             </span>
           </div>
 
           <h2 className="text-3xl font-bold leading-tight text-[#064F63] sm:text-4xl lg:text-5xl">
             Our Patients,{" "}
-            <span className="text-[#C92855]">Their Experiences</span>
+            <span className="text-[#C92855]">
+              Their Experiences
+            </span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-            Read feedback shared on the previous Bharathi Fertility Centre website.
+            Real experiences shared by patients about
+            their care and treatment at Bharathi Fertility Center.
           </p>
+
+          {/* <div className="mt-6 inline-flex items-center gap-3 rounded-xl border border-gray-100 bg-white px-5 py-3 shadow-sm">
+            <span className="text-lg font-bold text-[#064F63]">
+              5-Star
+            </span>
+
+            <div className="flex gap-0.5">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <Star
+                  key={star}
+                  size={17}
+                  fill="#E9A51A"
+                  color="#E9A51A"
+                />
+              ))}
+            </div>
+
+            <span className="text-xs text-gray-500">
+              Patient reviews
+            </span>
+          </div> */}
         </div>
 
-        <div
-          className="relative px-0 sm:px-10"
-          onTouchStart={() => setPaused(true)}
-          onTouchEnd={() => setPaused(false)}
-        >
+        {/* Carousel */}
+        <div className="relative px-0 sm:px-10">
+
+          {/* Previous button */}
           <button
             type="button"
             onClick={previous}
             aria-label="Previous testimonials"
-            className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#C92855]/15 bg-white text-[#064F63] shadow-md transition hover:bg-[#C92855] hover:text-white sm:flex"
+            className="absolute -left-1 top-1/2 z-10 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#C92855]/15 bg-white text-[#064F63] shadow-md transition hover:bg-[#C92855] hover:text-white sm:flex"
           >
             <ArrowLeft size={19} />
           </button>
 
+          {/* Slides container */}
           <div className="overflow-hidden">
             <div
-              className="flex items-stretch transition-transform duration-700 ease-in-out"
+              className="flex items-stretch transition-transform duration-700 ease-in-out motion-reduce:transition-none"
               style={{
-                transform: `translateX(-${activeIndex * (100 / cardsPerView)}%)`,
+                transform: `translateX(-${activeIndex * 100}%)`,
               }}
             >
-              {testimonials.map((item, index) => (
+              {slides.map((slide, slideIndex) => (
                 <div
-                  key={`${item.name}-${index}`}
-                  className="flex shrink-0 self-stretch px-2 sm:px-3"
-                  style={{ width: `${100 / cardsPerView}%` }}
+                  key={slideIndex}
+                  className="w-full shrink-0 px-0.5"
                 >
-                  <article className="flex h-[350px] w-full flex-col overflow-hidden rounded-2xl border border-[#C92855]/10 bg-white p-5 shadow-[0_8px_30px_rgba(75,18,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(75,18,61,0.12)] sm:h-[360px] sm:p-6">
-                    <div className="mb-4 flex shrink-0 items-center justify-between">
-                      <div className="flex gap-1 text-amber-400" aria-label="Rating shown on the previous website">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <Star key={star} size={15} fill="currentColor" />
-                        ))}
-                      </div>
-                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FCE7F3] text-[#C92855]">
-                        <Quote size={18} />
-                      </div>
-                    </div>
-
-                    <div className="min-h-0 flex-1 overflow-y-auto pr-1">
-                      <p className="whitespace-pre-line text-sm leading-6 text-gray-600 sm:text-[15px]">
-                        “{item.review}”
-                      </p>
-                    </div>
-
-                    <div className="my-4 h-px shrink-0 bg-[#F1E4ED]" />
-
-                    <div className="flex min-h-[46px] shrink-0 items-center gap-3">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FCE7F3] text-[#064F63]">
-                        <UserRound size={20} />
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="truncate text-sm font-bold text-[#064F63]">
-                          {item.name}
-                        </h3>
-                        <p className="mt-1 text-xs text-gray-500">Patient feedback</p>
-                      </div>
-                    </div>
-                  </article>
+                  <div
+                    className={`grid items-stretch gap-5 lg:gap-7 ${
+                      cardsPerView === 2
+                        ? "grid-cols-2"
+                        : "grid-cols-1"
+                    }`}
+                  >
+                    {slide.map((item, index) => (
+                      <TestimonialCard
+                        key={`${item.name}-${slideIndex}-${index}`}
+                        item={item}
+                      />
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
+          {/* Next button */}
           <button
             type="button"
             onClick={next}
             aria-label="Next testimonials"
-            className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#C92855] text-white shadow-md transition hover:bg-[#064F63] sm:flex"
+            className="absolute -right-1 top-1/2 z-10 hidden h-10 w-10 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#C92855] text-white shadow-md transition hover:bg-[#064F63] sm:flex"
           >
             <ArrowRight size={19} />
           </button>
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-3 sm:hidden">
+        {/* Mobile navigation */}
+        <div className="mt-6 flex items-center justify-center gap-4 sm:hidden">
           <button
             type="button"
             onClick={previous}
@@ -225,6 +341,11 @@ export default function Testimonials() {
           >
             <ArrowLeft size={18} />
           </button>
+
+          <span className="text-xs font-semibold text-gray-500">
+            {activeIndex + 1} / {slides.length}
+          </span>
+
           <button
             type="button"
             onClick={next}
@@ -235,14 +356,17 @@ export default function Testimonials() {
           </button>
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+        {/* Slide indicators */}
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+          {slides.map((_, index) => (
             <button
               key={index}
               type="button"
               onClick={() => setActiveIndex(index)}
               aria-label={`Go to testimonial slide ${index + 1}`}
-              aria-current={activeIndex === index ? "true" : undefined}
+              aria-current={
+                activeIndex === index ? "true" : undefined
+              }
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 activeIndex === index
                   ? "w-7 bg-[#C92855]"
@@ -252,10 +376,24 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <p className="mt-6 text-center text-xs leading-5 text-gray-500">
-          Patient experiences are individual. Obtain appropriate patient consent
-          before publishing testimonials and associated names.
+        {/* Google button */}
+        {/* <div className="mt-10 text-center">
+          <a
+            href={googleReviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C92855] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#C92855]/20 transition duration-300 hover:-translate-y-1 hover:bg-[#064F63]"
+          >
+            Read More Google Reviews
+            <ExternalLink size={16} />
+          </a>
+        </div> */}
+
+        <p className="mt-7 text-center text-xs leading-5 text-gray-500">
+          Patient experiences are individual. Please obtain
+          appropriate patient consent before publishing testimonials.
         </p>
+
       </div>
     </section>
   );
