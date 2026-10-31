@@ -7,7 +7,7 @@ export default function DrBharathi() {
     <>
       <Seo
         title="Dr. V. Bharathi | Gynaecologist in Mandaveli, Chennai"
-        description="Dr. V. Bharathi, Senior Obstetrician, Gynaecologist, Laparoscopic Surgeon and Fertility Specialist in Chennai."
+        description="Dr. V. Bharathi, Senior Obstetrician, Gynaecologist, Laparoscopic and Fertility Specialist in Chennai."
         path="/dr-bharathi-v-gynaecologist-mandaveli-chennai/"
       />
 

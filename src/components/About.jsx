@@ -60,7 +60,7 @@ export default function About() {
             Meet Dr. V. Bharathi
           </h2>
           <p className="mt-2 text-lg font-semibold text-cyan-800 sm:text-xl">
-            Obstetrician and Gynaecologist in Chennai
+            Senior Obstetrician, Gynaecologist, Laparoscopic and Fertility Specialist in Chennai
           </p>
           <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-rose-500 via-orange-400 to-cyan-600" />
         </div>
