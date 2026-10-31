@@ -18,19 +18,18 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/95 shadow-sm backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-
-        {/* Logo */}
+      <div className="mx-auto flex h-[86px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        {/* Logo - Bigger without changing navbar height */}
         <a
           href="#home"
           onClick={closeMenu}
           aria-label="Bharati Fertility and Women Center - Home"
-          className="flex shrink-0 items-center"
+          className="relative flex h-full w-[75px] shrink-0 items-center sm:w-[90px]"
         >
           <img
-            src="/images/Dr. Bharathi_Logo.png"
+            src="/images/logo_c.png"
             alt="Bharati Fertility and Women Center"
-            className="h-[64px] w-[78px] object-contain sm:h-[72px] sm:w-[88px]"
+            className="absolute left-0 top-1/2 h-[82px] w-[82px] -translate-y-1/2 object-contain sm:h-[80px] sm:w-[95px]"
           />
         </a>
 
@@ -55,15 +54,15 @@ export default function Navbar() {
           href="#appointment"
           className="hidden shrink-0 items-center gap-2 rounded-full bg-[#C92855] px-4 py-3 text-sm font-semibold text-white shadow-md shadow-pink-100 transition duration-300 hover:-translate-y-0.5 hover:bg-[#0875C9] lg:inline-flex xl:px-5"
         >
-          
           <span>Book Appointment</span>
-          
         </a>
 
         {/* Mobile Menu Button */}
         <button
           type="button"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setMenuOpen((prev) => !prev)}

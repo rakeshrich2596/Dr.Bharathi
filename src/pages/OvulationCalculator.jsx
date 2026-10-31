@@ -230,7 +230,7 @@ export default function OvulationCalculator() {
 
     if (sendWhatsApp) {
       const message = [
-        `Hello Dr. Bharathi's team, my name is ${fullName.trim()}.`,
+        `Hello Dr. V. Bharathi's team, my name is ${fullName.trim()}.`,
         `My estimated ovulation date is ${formatDate(results.ovulation)}.`,
         `My estimated fertile window is ${formatDate(results.fertileStart)} to ${formatDate(results.fertileEnd)}.`,
         `My next expected period is ${formatDate(results.nextPeriod)}.`,
@@ -284,7 +284,7 @@ export default function OvulationCalculator() {
 
           <div className="hidden items-center gap-2 rounded-full border border-pink-200 bg-gradient-to-r from-pink-50 to-cyan-50 px-4 py-2 text-sm md:flex">
             <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span className="font-bold text-[#C92855]">Dr. Bharathi V</span>
+            <span className="font-bold text-[#C92855]">Dr. V. Bharathi</span>
             <span className="text-slate-300">|</span>
             <span className="text-slate-600">Women's Health & Fertility Care</span>
           </div>
@@ -990,11 +990,11 @@ export default function OvulationCalculator() {
         />
 
         <p className="text-sm font-semibold text-[#064F63]">
-          Dr. Bharathi V · Women's Health & Fertility Care
+          Dr. V. Bharathi · Women's Health & Fertility Care
         </p>
 
         <p className="mt-2 text-xs leading-5 text-slate-500">
-          © {new Date().getFullYear()} Dr. Bharathi V. For educational purposes
+          © {new Date().getFullYear()} Dr. V. Bharathi. For educational purposes
           only. Consult your healthcare professional for medical advice.
         </p>
       </footer>

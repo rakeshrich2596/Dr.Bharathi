@@ -68,7 +68,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <a href="#home">
               <img
-                src="/images/Dr. Bharathi_Logo.png"
+                src="/images/logo_c.png"
                 alt="Bharati Fertility & Women Center"
                 className="h-24 w-32 object-contain object-left"
               />

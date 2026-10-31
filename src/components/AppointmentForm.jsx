@@ -42,7 +42,7 @@ export default function AppointmentForm() {
     }
 
     const message = [
-      "Hello, I would like to book an appointment with Dr. Bharathi V.",
+      "Hello, I would like to book an appointment with Dr. V. Bharathi.",
       "",
       `Patient Name: ${formData.name.trim()}`,
       `Phone Number: ${formData.phone.trim()}`,
@@ -79,7 +79,7 @@ export default function AppointmentForm() {
               </h2>
 
               <p className="mt-2 text-sm leading-6 text-slate-500 sm:text-base">
-                Share your details to request a consultation with Dr. Bharathi V.
+                Share your details to request a consultation with Dr. V. Bharathi.
               </p>
             </div>
 

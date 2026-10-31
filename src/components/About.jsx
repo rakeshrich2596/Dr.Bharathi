@@ -54,10 +54,10 @@ export default function About() {
         <div className="mx-auto mb-10 max-w-4xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-rose-600 sm:text-sm">
             <HeartPulse size={16} />
-            About Dr. Bharathi V
+            About Dr. V. Bharathi
           </span>
           <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
-            Meet Dr. Bharathi V
+            Meet Dr. V. Bharathi
           </h2>
           <p className="mt-2 text-lg font-semibold text-cyan-800 sm:text-xl">
             Obstetrician and Gynaecologist in Chennai
@@ -68,13 +68,13 @@ export default function About() {
         {/* Balanced two-column profile */}
         <div className="grid items-start gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-10">
           {/* Image panel */}
-          <div className="mx-auto w-full max-w-lg lg:sticky lg:top-28">
+          <div className="mx-auto  w-full max-w-lg lg:sticky lg:top-28">
             <div className="relative rounded-[2rem] bg-gradient-to-br from-rose-100 via-orange-50 to-cyan-100 p-3 shadow-[0_20px_55px_-28px_rgba(15,23,42,0.4)]">
               <div className="overflow-hidden rounded-[1.55rem] bg-white">
                 <img
-                  src="/images/about.png"
-                  alt="Dr. Bharathi V"
-                  className="h-[340px] w-full object-cover object-top sm:h-[410px] lg:h-[460px]"
+                  src="/images/about2.png"
+                  alt="Dr. V. Bharathi"
+                  className="h-[450px] w-full object-cover object-top sm:h-[550px] lg:h-[620px]"
                   loading="lazy"
                 />
               </div>
@@ -110,7 +110,7 @@ export default function About() {
 
               <div className="space-y-4 text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-7">
                 <p>
-                  Dr. Bharathi V has a professional background in obstetrics,
+                  Dr. V. Bharathi has a professional background in obstetrics,
                   gynaecology and reproductive medicine, with additional
                   training in laparoscopic surgery.
                 </p>
@@ -123,7 +123,7 @@ export default function About() {
                 </p>
                 <p>
                   As Medical Director of Bharati Fertility Center, located in
-                  Mandaveli, Chennai, Dr. Bharathi&apos;s stated approach
+                  Mandaveli, Chennai, Dr. V. Bharathi&apos;s stated approach
                   emphasises evidence-based practice, ethical treatment and
                   detailed patient counselling.
                 </p>
@@ -171,7 +171,7 @@ export default function About() {
                 href="#expertise"
                 className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C92855] px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-rose-200/70 transition hover:-translate-y-0.5 hover:bg-[#ad2048] sm:w-auto"
               >
-                Explore Dr. Bharathi&apos;s Expertise
+                Explore Dr. V. Bharathi&apos;s Expertise
                 <ArrowRight size={18} />
               </a>
             </div>

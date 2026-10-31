@@ -103,7 +103,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 text-lg font-bold text-[#C92855] sm:text-xl">
-            Dr. Bharathi V
+            Dr. V. Bharathi
           </p>
 
           <p className="mt-1 text-sm font-medium text-slate-600 sm:text-base">
@@ -193,7 +193,7 @@ export default function Hero() {
             {/* Bottom image overlay */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-slate-900/75 via-slate-900/20 to-transparent px-5 pb-16 pt-24 sm:px-7 sm:pb-20">
               <p className="text-xl font-bold text-white sm:text-2xl">
-                Dr. Bharathi V
+                Dr. V. Bharathi
               </p>
 
               <p className="mt-1 text-xs text-white/90 sm:text-sm">
