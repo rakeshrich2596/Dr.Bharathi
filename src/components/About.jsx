@@ -168,7 +168,7 @@ export default function About() {
               </div> */}
 
               <a
-                href="#expertise"
+                href="#medical-expertise"
                 className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C92855] px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-rose-200/70 transition hover:-translate-y-0.5 hover:bg-[#ad2048] sm:w-auto"
               >
                 Explore Dr. V. Bharathi&apos;s Expertise
@@ -179,7 +179,7 @@ export default function About() {
         </div>
 
         {/* Expertise cards */}
-        <div id="expertise" className="scroll-mt-28 pt-16">
+        <div className="pt-16">
           <div className="mb-7 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-700">
               Areas of focus

@@ -4,7 +4,7 @@ import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Expertise", href: "#expertise" },
+  { label: "Expertise", href: "#medical-expertise" },
   { label: "Women's Health", href: "#knowledge" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Ovulation Calculator", href: "/ovulation-calculator" },

@@ -13,7 +13,7 @@ import {
 const quickLinks = [
   { name: "Home", path: "#home" },
   { name: "About Us", path: "#about" },
-  { name: "Our Expertise", path: "#expertise" },
+  { name: "Our Expertise", path: "#medical-expertise" },
   { name: "Our Approach", path: "#approach" },
   { name: "Knowledge Centre", path: "#knowledge" },
   { name: "Ovulation Calculator", path: "/ovulation-calculator" },
