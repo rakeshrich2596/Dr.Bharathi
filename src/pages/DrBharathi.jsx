@@ -1,3 +1,4 @@
+
 import Seo from "../components/Seo";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,7 +8,7 @@ export default function DrBharathi() {
     <>
       <Seo
         title="Dr. V. Bharathi | Gynaecologist in Mandaveli, Chennai"
-        description="Dr. Bharathi V, Senior Obstetrician & Gynaecologist , Fertility consultant & laparoscopic surgeon in Mandaveli, Chennai, specialises in women's healthcare, PCOS, pregnancy care and reproductive medicine."
+        description="Dr. Bharathi V, Senior Obstetrician and Gynaecologist, Fertility Consultant and Laparoscopic Surgeon in Mandaveli, Chennai, provides women's healthcare, PCOS care, pregnancy care and fertility treatment."
         path="/dr-bharathi-v-gynaecologist-mandaveli-chennai/"
       />
 
@@ -16,12 +17,14 @@ export default function DrBharathi() {
       <main>
         <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-[#064F63] sm:text-4xl">
-            Dr. V. Bharathi – Obstetrician &amp; Gynaecologist
+            Dr. V. Bharathi – Obstetrician &amp; Gynaecologist in Mandaveli, Chennai
           </h1>
 
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-            Dr. V. Bharathi provides women's healthcare, PCOS care, pregnancy
-            consultation and reproductive medicine in Mandaveli, Chennai.
+            Dr. V. Bharathi is a Senior Obstetrician and Gynaecologist,
+            Fertility Consultant and Laparoscopic Surgeon providing
+            women's healthcare, PCOS care, pregnancy consultation
+            and reproductive medicine in Mandaveli, Chennai.
           </p>
         </section>
       </main>
