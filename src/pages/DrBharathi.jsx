@@ -6,8 +6,8 @@ export default function DrBharathi() {
   return (
     <>
       <Seo
-        title="Dr. V. Bharathi – Gynaecologist in Mandaveli, Chennai"
-        description="Dr. V. Bharathi, Obstetrician & Gynaecologist in Mandaveli, Chennai, specialises in women's health, PCOS, pregnancy care and reproductive medicine."
+        title="Dr. V. Bharathi | Gynaecologist in Mandaveli, Chennai"
+        description="Dr. V. Bharathi, Senior Obstetrician, Gynaecologist, Laparoscopic Surgeon and Fertility Specialist in Chennai."
         path="/dr-bharathi-v-gynaecologist-mandaveli-chennai/"
       />
 
@@ -20,9 +20,8 @@ export default function DrBharathi() {
           </h1>
 
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-            Dr. V. Bharathi provides women's healthcare, PCOS care,
-            pregnancy consultation and reproductive medicine in
-            Mandaveli, Chennai.
+            Dr. V. Bharathi provides women's healthcare, PCOS care, pregnancy
+            consultation and reproductive medicine in Mandaveli, Chennai.
           </p>
         </section>
       </main>
