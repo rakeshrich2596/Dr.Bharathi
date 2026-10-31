@@ -153,7 +153,7 @@ export default function Footer() {
               {services.map((service) => (
                 <li key={service}>
                   <a
-                    href="#expertise"
+                    href="#medical-expertise"
                     className="group inline-flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-[#087D8B]"
                   >
                     <ChevronRight

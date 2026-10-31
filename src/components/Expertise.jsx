@@ -90,8 +90,8 @@ const accentStyles = {
 export default function Expertise() {
   return (
     <section
-      id="expertise"
-      className="bg-gradient-to-b from-white to-slate-50/70 py-14 sm:py-16 lg:py-20"
+      id="medical-expertise"
+      className=" scroll-mt-24 bg-gradient-to-b from-white to-slate-50/70 py-14 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
