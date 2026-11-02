@@ -12,11 +12,14 @@ export default function DrBharathi() {
       "Obstetric",
       "Gynecologic"
     ],
-    "url": "https://drbharati.netlify.app/",
+    "url": "https://drbharati.netlify.app/dr-bharathi-v-gynaecologist-mandaveli-chennai/",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Mandaveli, Chennai",
+      "streetAddress":
+        "New No. 49, Old No. 21, Venkatakrishna Road, Opposite Bank of Baroda",
+      "addressLocality": "Chennai",
       "addressRegion": "Tamil Nadu",
+      "postalCode": "600028",
       "addressCountry": "IN"
     },
     "worksFor": {
