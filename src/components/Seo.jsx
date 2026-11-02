@@ -1,19 +1,29 @@
 
 import { Helmet } from "react-helmet-async";
 
-// Replace with the confirmed production domain.
-const SITE_URL = "https://drbharati.netlify.app";
+// Production domain
+const SITE_URL = "https://drbharatigynecologist.com";
 
-// true = staging/test website
-// false = production website
-const IS_TEST_SITE = true;
+// false = Production website
+// true = Staging / Test website
+const IS_TEST_SITE = false;
 
 export default function Seo({
+  // Basic SEO
   title,
   description,
   path = "/",
+
+  // Open Graph - separate from Meta title and description
+  ogTitle,
+  ogDescription,
+  ogType = "website",
+
+  // Social sharing image
   image = "/og-image.png",
-  imageAlt = "Bharati Fertility & Women Center",
+  imageAlt = "Dr. Bharathi V - Bharati Fertility & Women Center",
+
+  // Structured data
   schema = null,
 }) {
   const cleanSiteUrl = SITE_URL.replace(/\/$/, "");
@@ -29,6 +39,10 @@ export default function Seo({
       ? image
       : `${cleanSiteUrl}${image.startsWith("/") ? image : `/${image}`}`
     : null;
+
+  // Use separate OG values when provided
+  const finalOgTitle = ogTitle || title;
+  const finalOgDescription = ogDescription || description;
 
   return (
     <Helmet>
@@ -50,7 +64,7 @@ export default function Seo({
         }
       />
 
-      {/* Canonical - Production only */}
+      {/* Canonical URL */}
       {!IS_TEST_SITE && (
         <link
           rel="canonical"
@@ -59,14 +73,20 @@ export default function Seo({
       )}
 
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
+      <meta
+        property="og:title"
+        content={finalOgTitle}
+      />
 
       <meta
         property="og:description"
-        content={description}
+        content={finalOgDescription}
       />
 
-      <meta property="og:type" content="website" />
+      <meta
+        property="og:type"
+        content={ogType}
+      />
 
       <meta
         property="og:site_name"
@@ -91,13 +111,18 @@ export default function Seo({
           />
 
           <meta
-            name="twitter:image"
-            content={imageUrl}
+            property="og:image:width"
+            content="1200"
+          />
+
+          <meta
+            property="og:image:height"
+            content="630"
           />
         </>
       )}
 
-      {/* Twitter */}
+      {/* Twitter Card */}
       <meta
         name="twitter:card"
         content="summary_large_image"
@@ -105,13 +130,20 @@ export default function Seo({
 
       <meta
         name="twitter:title"
-        content={title}
+        content={finalOgTitle}
       />
 
       <meta
         name="twitter:description"
-        content={description}
+        content={finalOgDescription}
       />
+
+      {imageUrl && (
+        <meta
+          name="twitter:image"
+          content={imageUrl}
+        />
+      )}
 
       {/* Structured Data */}
       {schema && (

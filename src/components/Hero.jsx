@@ -10,6 +10,7 @@ import {
   Baby,
   Flower2,
   Sparkles,
+  Phone,
 } from "lucide-react";
 
 const slides = [
@@ -85,8 +86,11 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-20">
-        {/* Left content */}
+
+        {/* Left Content */}
         <div className="relative z-10">
+
+          {/* Badge */}
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white/90 px-4 py-2 text-xs font-semibold text-[#0875C9] sm:text-sm">
             <Heart
               size={16}
@@ -95,30 +99,25 @@ export default function Hero() {
             Compassionate Women's Healthcare
           </div>
 
+          {/* Main Heading */}
           <h1 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-slate-800 sm:text-4xl lg:text-[43px] xl:text-[46px]">
-            Understanding Women's Health{" "}
+            Dr. Bharathi V – Gynaecologist &amp; Fertility Specialist in{" "}
             <span className="text-[#0875C9]">
-              Starts with the Right Guidance
+              Mandaveli, Chennai
             </span>
           </h1>
 
-          <p className="mt-5 text-lg font-bold text-[#C92855] sm:text-xl">
-            Dr. Bharathi. V
+          {/* Hero Description */}
+          <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+            Expert care for every stage of a woman's life, from periods, PCOS
+            and pregnancy to laparoscopic surgery and fertility treatment.
+            Get personalised guidance from Dr. Bharathi V and her team.
           </p>
 
-          <p className="mt-1 text-sm font-medium text-slate-600 sm:text-base">
-            Senior Obs &amp; Gynaecologist | Fertility consultant & laparoscopic surgeon
-          </p>
-
-          <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-            Women's health concerns can arise at different stages of life,
-            from irregular periods and PCOS to pregnancy planning and
-            fertility-related questions. Understanding your health and
-            available options is an important first step.
-          </p>
-
-          {/* CTA buttons */}
+          {/* CTA Buttons */}
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+
+            {/* CTA 1: Book Consultation */}
             <a
               href="#appointment"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C92855] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition duration-300 hover:-translate-y-1 hover:bg-[#0875C9] sm:px-7 sm:text-base"
@@ -127,16 +126,19 @@ export default function Hero() {
               <ArrowUpRight size={18} />
             </a>
 
+            {/* CTA 2: Call Clinic */}
             <a
-              href="#about"
+              href="tel:+918220052005"
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#0875C9] bg-white px-6 py-3.5 text-sm font-semibold text-[#0875C9] transition duration-300 hover:bg-[#0875C9] hover:text-white sm:px-7 sm:text-base"
             >
-              Know Your Doctor
+              <Phone size={18} />
+              Call the Clinic
             </a>
           </div>
 
-          {/* Care highlights */}
+          {/* Care Highlights */}
           <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3 text-xs font-medium text-slate-600 sm:text-sm">
+
             <span className="flex items-center gap-2">
               <ShieldCheck size={18} className="shrink-0 text-[#0875C9]" />
               Patient-centred care
@@ -146,16 +148,18 @@ export default function Hero() {
               <Stethoscope size={18} className="shrink-0 text-[#C92855]" />
               Women's health guidance
             </span>
+
           </div>
         </div>
 
-        {/* Right image slider */}
+        {/* Right Image Slider */}
         <div className="relative mx-auto w-full max-w-[520px]">
-          {/* Background glow */}
+
+          {/* Background Glow */}
           <div className="absolute -right-5 -top-5 h-28 w-28 rounded-full bg-pink-200/70 blur-2xl" />
           <div className="absolute -bottom-5 -left-5 h-32 w-32 rounded-full bg-blue-200/70 blur-2xl" />
 
-          {/* Floating decorative icons */}
+          {/* Floating Decorative Icons */}
           <div className="absolute -right-3 top-10 z-20 flex h-12 w-12 animate-float items-center justify-center rounded-full bg-white text-[#C92855] shadow-lg sm:-right-5 sm:h-14 sm:w-14">
             <Heart size={25} />
           </div>
@@ -164,9 +168,9 @@ export default function Hero() {
             <Sparkles size={22} />
           </div>
 
-          {/* Optimized image frame */}
+          {/* Image Frame */}
           <div className="relative overflow-hidden rounded-[1.5rem] border-[6px] border-white bg-white shadow-2xl shadow-blue-100 sm:rounded-[2rem] sm:border-[8px]">
-            {/* Keep image frame height stable */}
+
             <div className="aspect-[4/5] w-full bg-pink-50 sm:aspect-[4/4.7]" />
 
             {slides.map((slide, index) => (
@@ -184,28 +188,29 @@ export default function Hero() {
                     ? "z-[1] opacity-100"
                     : "z-0 opacity-0"
                 }`}
-                onLoad={(event) => {
-                  event.currentTarget.dataset.loaded = "true";
-                }}
               />
             ))}
 
-            {/* Bottom image overlay */}
+            {/* Bottom Image Overlay */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-slate-900/75 via-slate-900/20 to-transparent px-5 pb-16 pt-24 sm:px-7 sm:pb-20">
+
               <p className="text-xl font-bold text-white sm:text-2xl">
-                Dr. Bharathi. V
+                Dr. Bharathi V
               </p>
 
               <p className="mt-1 text-xs text-white/90 sm:text-sm">
                 Senior Obs &amp; Gynaecologist
               </p>
+
               <p className="mt-1 text-xs text-white/90 sm:text-sm">
-                Fertility consultant & laparoscopic surgeon
+                Fertility consultant &amp; laparoscopic surgeon
               </p>
+
             </div>
 
-            {/* Previous / Next controls */}
+            {/* Previous / Next Controls */}
             <div className="absolute bottom-0 right-0 z-20 flex overflow-hidden rounded-tl-2xl">
+
               <button
                 type="button"
                 onClick={previousSlide}
@@ -223,15 +228,17 @@ export default function Hero() {
               >
                 <ArrowRight size={21} />
               </button>
+
             </div>
           </div>
 
-          {/* Sliding information card */}
+          {/* Sliding Information Card */}
           <div
             key={activeSlide}
             className="absolute -left-2 top-[52%] z-30 max-w-[245px] animate-card-enter rounded-2xl bg-white p-3.5 shadow-xl shadow-slate-900/10 sm:-left-8 sm:max-w-[275px] sm:p-4"
           >
             <div className="flex items-center gap-3">
+
               <div
                 className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${currentSlide.iconBg} ${currentSlide.iconColor}`}
               >
@@ -247,11 +254,13 @@ export default function Hero() {
                   {currentSlide.subtitle}
                 </p>
               </div>
+
             </div>
           </div>
 
-          {/* Slider indicators */}
+          {/* Slider Indicators */}
           <div className="mt-5 flex items-center justify-center gap-2">
+
             {slides.map((slide, index) => (
               <button
                 key={slide.image}
@@ -266,6 +275,7 @@ export default function Hero() {
                 }`}
               />
             ))}
+
           </div>
         </div>
       </div>

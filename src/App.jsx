@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -21,31 +20,36 @@ import OvulationCalculator from "./pages/OvulationCalculator";
 function HomePage() {
   const clinicSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Bharati Fertility & Women Center",
-    "url": "https://drbharati.netlify.app/",
-    "telephone": [
-      "+918220052005",
-      "+919791154545"
-    ],
-    "email": "bharatifertility@gmail.com",
-    "address": {
+    "@type": "Physician",
+    name: "Dr. Bharathi V",
+    medicalSpecialty: ["Obstetric", "Gynecologic"],
+
+    url: "https://drbharatigynecologist.com/",
+    image: "https://drbharatigynecologist.com/images/about2.png",
+    telephone: ["+918220052005", "+919791154545"],
+    email: "bharatifertility@gmail.com",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress":
+      streetAddress:
         "New No. 49, Old No. 21, Venkatakrishna Road, Opposite Bank of Baroda",
-      "addressLocality": "Chennai",
-      "addressRegion": "Tamil Nadu",
-      "postalCode": "600028",
-      "addressCountry": "IN"
-    }
+      addressLocality: "Chennai",
+      addressRegion: "Tamil Nadu",
+      postalCode: "600028",
+      addressCountry: "IN",
+    },
   };
 
   return (
     <>
       <Seo
-        title="Bharati Fertility & Women Center | Gynaecologist in Mandaveli, Chennai"
-        description="Consult Dr. Bharathi V at Bharati Fertility & Women Center, Mandaveli, Chennai for gynaecology, PCOS, pregnancy and fertility care."
+        title="Dr. Bharathi V – Gynaecologist & Fertility Specialist in Mandaveli, Chennai"
+        description="Consult Dr. Bharathi V, obstetrician, gynaecologist and fertility specialist at Bharati Fertility & Women Center, Mandaveli, Chennai. Care for PCOS, periods, pregnancy and fertility. Book online."
         path="/"
+        ogTitle="Dr. Bharathi V – Gynaecologist & Fertility Specialist, Mandaveli"
+        ogDescription="Dr. Bharathi V, gynaecologist and fertility specialist in Mandaveli, Chennai. IVF, IUI, PCOS, tube block and miscarriage care. Book a consultation."
+        ogType="website"
+        image="/og-image.png"
+        imageAlt="Dr. Bharathi V - Bharati Fertility & Women Center"
         schema={clinicSchema}
       />
 
@@ -74,10 +78,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
 
-      <Route
-        path="/ovulation-calculator"
-        element={<OvulationCalculator />}
-      />
+      <Route path="/ovulation-calculator" element={<OvulationCalculator />} />
 
       <Route
         path="/dr-bharathi-v-gynaecologist-mandaveli-chennai/"

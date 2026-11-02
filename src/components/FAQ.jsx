@@ -1,43 +1,43 @@
+
 import React, { useState } from "react";
 import {
   Plus,
   Minus,
   MessageCircleQuestion,
-  CalendarDays,
   ArrowUpRight,
   HeartPulse,
 } from "lucide-react";
 
 const faqData = [
   {
+    question: "Should I see a gynaecologist or a fertility specialist?",
+    answer:
+      "For period problems or pelvic pain, see a gynaecologist. For trouble conceiving, see a fertility specialist. Dr. Bharathi V is both, so one consultation covers either.",
+  },
+  {
     question: "When should I consult a fertility specialist?",
     answer:
-      "Consider consulting a fertility specialist if you have been trying to conceive for 12 months without success, or after 6 months if you are 35 or older. If you have irregular periods or a known reproductive health concern, you may benefit from an earlier consultation.",
+      "After 12 months of trying without success, or 6 months if you are 35 or older. See her earlier if you have irregular periods, PCOS or repeated miscarriages.",
   },
   {
-    question: "What fertility treatments are available?",
+    question: "What is the difference between IUI and IVF?",
     answer:
-      "Depending on your individual needs, treatment options may include ovulation induction, fertility medications, intrauterine insemination (IUI), or in vitro fertilisation (IVF). Your doctor can explain suitable options after evaluating your medical history and test results.",
-  },
-  {
-    question: "What is the difference between IVF and IUI?",
-    answer:
-      "IUI involves placing prepared sperm into the uterus around ovulation. IVF involves fertilising an egg with sperm in a laboratory and transferring an embryo into the uterus. The appropriate treatment depends on several factors, including your diagnosis and fertility assessment.",
+      "In IUI, prepared sperm is placed inside the uterus. In IVF, eggs are fertilised in a laboratory and the embryo is transferred to the uterus. Your doctor will advise which suits you.",
   },
   {
     question: "Can PCOS affect my chances of getting pregnant?",
     answer:
-      "PCOS can affect ovulation and make conception more difficult for some women. However, many women with PCOS conceive with appropriate guidance and treatment. A gynaecologist can help assess your individual situation and discuss available options.",
+      "Yes, it can cause irregular ovulation, which makes conceiving harder. Many women with PCOS can be helped with the right evaluation and treatment.",
+  },
+  {
+    question: "What tests are done in a fertility evaluation?",
+    answer:
+      "Depending on your case: an AMH blood test, hormone tests, scans and follicular monitoring, a fallopian tube check, and a semen analysis for your partner.",
   },
   {
     question: "What should I bring to my first consultation?",
     answer:
-      "Bring any previous medical reports, ultrasound scans, blood test results, current medication details, and relevant fertility treatment records. If available, menstrual cycle information can also help your doctor understand your concerns.",
-  },
-  {
-    question: "How can I book an appointment?",
-    answer:
-      "You can use the appointment enquiry form on this website to share your contact details and preferred consultation time. The clinic team can then help confirm availability and the next steps.",
+      "Previous reports, scans and prescriptions, your period dates, and details of any earlier treatment or miscarriages. Bring your partner’s reports too, if you have them.",
   },
 ];
 
@@ -63,8 +63,7 @@ const FAQ = () => {
       <div className="relative mx-auto max-w-7xl">
 
         {/* Section Heading */}
-        <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
-
+        <div className="mx-auto mb-12 max-w-4xl text-center sm:mb-16">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-pink-100 bg-white px-4 py-2 shadow-sm">
             <MessageCircleQuestion
               size={17}
@@ -76,9 +75,9 @@ const FAQ = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#064F63] sm:text-4xl lg:text-5xl">
-            Everything You Need <span className="mt-2 inline-block text-[#C92855]">
-              to Know
+          <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#064F63] sm:text-4xl lg:text-4xl">
+            Fertility & Gynaecology FAQs: <span className="mt-2 inline-block text-[#C92855]">
+              Everything You Need to Know
             </span>
             
           </h2>
@@ -90,45 +89,49 @@ const FAQ = () => {
           {/* Left Information Card */}
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#064F63] via-[#5B194D] to-[#7B225D] p-7 text-white shadow-xl shadow-[#064F63]/10 sm:p-9">
 
+            {/* Decorative Circle */}
             <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full border-[25px] border-white/5" />
 
             <div className="relative">
 
+              {/* Icon */}
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-pink-300 ring-1 ring-white/10">
                 <HeartPulse size={30} strokeWidth={1.7} />
               </div>
 
+              {/* Card Heading */}
               <h3 className="text-2xl font-bold leading-snug sm:text-3xl">
-                Have More
-                <span className="block text-pink-300">
-                  Questions?
-                </span>
+                Have More Questions?
               </h3>
 
+              {/* Description */}
               <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
-                Every woman's health journey is different.
-                Speak with our clinic team to understand your
-                consultation options.
+                Every couple’s fertility journey is different. Speak with
+                Dr. Bharathi V’s clinic team in Mandaveli to understand
+                your consultation options.
               </p>
 
               <div className="my-7 h-px bg-white/15" />
 
+              {/* Appointment Information */}
               <div className="flex items-start gap-3">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-pink-300">
-                  <CalendarDays size={21} />
+                  <HeartPulse size={21} />
                 </div>
 
                 <div>
                   <h4 className="font-bold">
-                    Need an Appointment?
+                    Need Personalised Guidance?
                   </h4>
 
                   <p className="mt-1 text-sm leading-6 text-white/65">
-                    Send an enquiry through our website.
+                    Our clinic team can help you understand your
+                    consultation options.
                   </p>
                 </div>
               </div>
 
+              {/* CTA Button */}
               <a
                 href="#appointment"
                 className="group mt-7 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-[#C92855] px-5 py-4 text-sm font-bold text-white transition duration-300 hover:bg-[#D00079] focus:outline-none focus:ring-4 focus:ring-pink-300/40"
@@ -141,6 +144,7 @@ const FAQ = () => {
                 />
               </a>
 
+              {/* Availability Note */}
               <p className="mt-4 text-center text-xs leading-5 text-white/55">
                 Appointment availability is subject to confirmation.
               </p>
@@ -161,6 +165,7 @@ const FAQ = () => {
                       : "border-gray-100 shadow-sm hover:border-pink-100"
                   }`}
                 >
+                  {/* Question Button */}
                   <button
                     type="button"
                     onClick={() => toggleFAQ(index)}
@@ -182,6 +187,7 @@ const FAQ = () => {
                       {faq.question}
                     </span>
 
+                    {/* Plus / Minus Icon */}
                     <span
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
                         isOpen
@@ -197,6 +203,7 @@ const FAQ = () => {
                     </span>
                   </button>
 
+                  {/* Answer */}
                   <div
                     id={`faq-answer-${index}`}
                     hidden={!isOpen}
@@ -213,29 +220,6 @@ const FAQ = () => {
             })}
           </div>
         </div>
-
-        {/* Bottom Contact Note */}
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 rounded-2xl border border-pink-100 bg-white/80 p-5 text-center sm:flex-row sm:px-7 sm:text-left">
-          <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-pink-50 text-[#C92855]">
-              <HeartPulse size={22} />
-            </div>
-
-            <p className="max-w-xl text-sm leading-6 text-gray-600">
-              Need personalised medical guidance? Please consult
-              a qualified healthcare professional.
-            </p>
-          </div>
-
-          <a
-            href="#appointment"
-            className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-[#C92855] transition hover:text-[#064F63]"
-          >
-            Contact Our Team
-            <ArrowUpRight size={17} />
-          </a>
-        </div>
-
       </div>
     </section>
   );

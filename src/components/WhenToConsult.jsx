@@ -7,7 +7,6 @@ import {
   Baby,
   Flower2,
   ArrowUpRight,
-  AlertTriangle,
   Check,
 } from "lucide-react";
 
@@ -16,37 +15,37 @@ const concerns = [
     icon: CalendarCheck,
     title: "Repeatedly Irregular Periods",
     description:
-      "Changes in menstrual cycle timing or repeated irregular periods.",
+      "Irregular or missed periods can be linked to ovulation problems and may affect your chances of conceiving.",
   },
   {
     icon: Droplets,
     title: "Heavy or Prolonged Bleeding",
     description:
-      "Menstrual bleeding that is unusually heavy or lasts longer than expected.",
+      "Unusually heavy or long periods need assessment, as some causes can also affect fertility.",
   },
   {
     icon: Activity,
     title: "Pelvic Pain or Painful Periods",
     description:
-      "Persistent pelvic pain or menstrual pain that concerns you.",
+      "Persistent pelvic or period pain should be checked, as some conditions behind it can make conceiving harder.",
   },
   {
     icon: HeartPulse,
     title: "PCOS-Related Symptoms",
     description:
-      "Questions about symptoms, hormonal health or possible PCOS.",
+      "Irregular cycles, hormonal changes or a possible PCOS diagnosis, with or without difficulty conceiving.",
   },
   {
     icon: Flower2,
-    title: "Fertility Concerns",
+    title: "Difficulty Conceiving",
     description:
-      "Difficulty conceiving or questions about fertility assessment.",
+      "Trying for a year or more without success (or six months if you are 35 or older), or wanting a fertility assessment, including for your partner.",
   },
   {
     icon: Baby,
-    title: "Pregnancy Planning",
+    title: "Miscarriage or Pregnancy Planning",
     description:
-      "Planning a pregnancy or seeking antenatal care guidance.",
+      "Repeated miscarriages, or wanting expert guidance before you plan a pregnancy.",
   },
 ];
 
@@ -68,16 +67,16 @@ export default function WhenToConsult() {
             <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-[#064F63] sm:text-4xl lg:text-[42px]">
               When Should You Consult a{" "}
               <span className="text-[#0875C9]">
-                Gynaecologist?
+                Gynaecologist or Fertility Specialist?
               </span>
             </h2>
 
             <p className="mt-5 text-base leading-8 text-slate-600">
-              Some reproductive health changes may be temporary,
-              while others need medical assessment. If you notice
-              changes that concern you, a consultation can help
-              clarify possible causes and whether further
-              investigation or treatment is appropriate.
+              Some changes in your reproductive health are temporary,
+              while others need medical assessment. If something
+              concerns you, or you have been trying to conceive without
+              success, a consultation with Dr. Bharathi V can help find
+              the cause and the right next step.
             </p>
 
             <a
@@ -90,8 +89,8 @@ export default function WhenToConsult() {
 
             <div className="mt-8 border-l-2 border-[#0875C9] pl-4">
               <p className="text-sm leading-7 text-slate-600">
-                Your symptoms, medical history and individual
-                circumstances help guide the appropriate next steps.
+                Your symptoms, medical history and test results help
+                guide the appropriate next steps.
               </p>
             </div>
           </div>
@@ -115,6 +114,7 @@ export default function WhenToConsult() {
                       <h3 className="text-base font-bold text-[#064F63] sm:text-lg">
                         {concern.title}
                       </h3>
+
                       <Check
                         size={17}
                         className="mt-1 shrink-0 text-[#0875C9]"
@@ -134,32 +134,6 @@ export default function WhenToConsult() {
             })}
           </div>
         </div>
-
-        {/* Urgent care notice */}
-        <div className="mt-12 flex items-start gap-4 rounded-2xl border border-amber-200 bg-amber-50 p-5 sm:mt-16 sm:p-6">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
-            <AlertTriangle size={23} />
-          </div>
-
-          <div>
-            <h3 className="font-bold text-slate-900">
-              When to seek urgent medical attention
-            </h3>
-
-            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-              Severe pelvic pain, heavy bleeding accompanied by
-              dizziness, or pain or bleeding during a possible
-              pregnancy may require urgent medical attention.
-              Please seek prompt medical care rather than waiting
-              for a routine appointment.
-            </p>
-          </div>
-        </div>
-
-        <p className="mt-5 text-center text-xs leading-6 text-slate-500">
-          This information is for general educational purposes and
-          does not replace individual medical advice.
-        </p>
       </div>
     </section>
   );

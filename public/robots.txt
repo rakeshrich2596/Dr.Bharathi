@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drbharati.netlify.app//sitemap.xml
+Sitemap: https://drbharatigynecologist.com//sitemap.xml
