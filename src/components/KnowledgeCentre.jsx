@@ -99,7 +99,7 @@ export default function KnowledgeCentre() {
             <p className="max-w-xl text-base leading-8 text-gray-600 sm:text-lg">
               Explore general information on gynaecology and fertility
               topics, from periods and PCOS to IVF and male fertility,
-              from Dr. Bharathi V, gynaecologist and fertility specialist
+              from Dr. Bharathi. V, gynaecologist and fertility specialist
               in Mandaveli, Chennai.
             </p>
           </div>
@@ -139,7 +139,7 @@ export default function KnowledgeCentre() {
               href="#appointment"
               className="relative mt-10 inline-flex w-fit items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-[#064F63] transition hover:bg-pink-100"
             >
-              Discuss Your Concerns with Dr. Bharathi V
+              Discuss Your Concerns with Dr. Bharathi. V
               <ArrowUpRight size={18} />
             </a>
           </div>

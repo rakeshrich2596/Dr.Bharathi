@@ -12,7 +12,7 @@ const faqData = [
   {
     question: "Should I see a gynaecologist or a fertility specialist?",
     answer:
-      "For period problems or pelvic pain, see a gynaecologist. For trouble conceiving, see a fertility specialist. Dr. Bharathi V is both, so one consultation covers either.",
+      "For period problems or pelvic pain, see a gynaecologist. For trouble conceiving, see a fertility specialist. Dr. Bharathi. V is both, so one consultation covers either.",
   },
   {
     question: "When should I consult a fertility specialist?",
@@ -107,7 +107,7 @@ const FAQ = () => {
               {/* Description */}
               <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
                 Every couple’s fertility journey is different. Speak with
-                Dr. Bharathi V’s clinic team in Mandaveli to understand
+                Dr. Bharathi. V’s clinic team in Mandaveli to understand
                 your consultation options.
               </p>
 

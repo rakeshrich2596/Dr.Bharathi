@@ -63,7 +63,7 @@ export default function Approach() {
           </span>
 
           <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-4xl">
-            Your Fertility Journey with Dr. Bharathi V, <span className="mt-1 inline-block bg-gradient-to-r from-[#C92855] via-[#F47A45] to-[#0875C9] bg-clip-text text-transparent">
+            Your Fertility Journey with Dr. Bharathi. V, <span className="mt-1 inline-block bg-gradient-to-r from-[#C92855] via-[#F47A45] to-[#0875C9] bg-clip-text text-transparent">
               Gynaecologist & Fertility Specialist
             </span>
             
@@ -135,7 +135,7 @@ export default function Approach() {
             </h3>
 
             <p className="mt-2 text-sm leading-7 text-slate-600 sm:text-base">
-              Book a consultation with Dr. Bharathi V.
+              Book a consultation with Dr. Bharathi. V.
             </p>
           </div>
 

@@ -49,11 +49,11 @@ export default function About() {
 
           <span className="inline-flex items-center gap-2 rounded-full bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-rose-600 sm:text-sm">
             <HeartPulse size={16} />
-            About Dr. Bharathi V
+            About Dr. Bharathi. V
           </span>
 
           <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
-            Meet Dr. Bharathi V
+            Meet Dr. Bharathi. V
           </h2>
 
           <p className="mt-3 text-base font-semibold leading-7 text-cyan-800 sm:text-lg">
@@ -74,7 +74,7 @@ export default function About() {
               <div className="overflow-hidden rounded-[1.55rem] bg-white">
                 <img
                   src="/images/about2.png"
-                  alt="Dr. Bharathi V - Obstetrician, Gynaecologist and Fertility Specialist"
+                  alt="Dr. Bharathi. V - Obstetrician, Gynaecologist and Fertility Specialist"
                   className="h-[450px] w-full object-cover object-top sm:h-[550px] lg:h-[620px]"
                   loading="lazy"
                 />
@@ -115,13 +115,13 @@ export default function About() {
                 </div>
 
                 <h3 className="text-xl font-extrabold text-slate-900 sm:text-2xl">
-                  About Dr. Bharathi V
+                  About Dr. Bharathi. V
                 </h3>
 
               </div>
 
               <p className="text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8">
-                Dr. Bharathi V provides care across women’s health, from
+                Dr. Bharathi. V provides care across women’s health, from
                 menstrual and hormonal concerns and PCOS to pregnancy care,
                 laparoscopic surgery and fertility treatment. Her approach
                 is built on listening first, explaining clearly, and planning
@@ -168,7 +168,7 @@ export default function About() {
                 href="#appointment"
                 className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C92855] px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-rose-200/70 transition duration-300 hover:-translate-y-0.5 hover:bg-[#ad2048] sm:w-auto sm:px-6"
               >
-                Book a Consultation with Dr. Bharathi V
+                Book a Consultation with Dr. Bharathi. V
                 <ArrowRight size={18} />
               </a>
 

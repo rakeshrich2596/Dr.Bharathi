@@ -21,7 +21,7 @@ function HomePage() {
   const clinicSchema = {
     "@context": "https://schema.org",
     "@type": "Physician",
-    name: "Dr. Bharathi V",
+    name: "Dr. Bharathi. V",
     medicalSpecialty: ["Obstetric", "Gynecologic"],
 
     url: "https://drbharatigynecologist.com/",
@@ -42,14 +42,14 @@ function HomePage() {
   return (
     <>
       <Seo
-        title="Dr. Bharathi V – Gynaecologist & Fertility Specialist in Mandaveli, Chennai"
-        description="Consult Dr. Bharathi V, obstetrician, gynaecologist and fertility specialist at Bharati Fertility & Women Center, Mandaveli, Chennai. Care for PCOS, periods, pregnancy and fertility. Book online."
+        title="Dr. Bharathi. V – Gynaecologist & Fertility Specialist in Mandaveli, Chennai"
+        description="Consult Dr. Bharathi. V, obstetrician, gynaecologist and fertility specialist at Bharati Fertility & Women Center, Mandaveli, Chennai. Care for PCOS, periods, pregnancy and fertility. Book online."
         path="/"
-        ogTitle="Dr. Bharathi V – Gynaecologist & Fertility Specialist, Mandaveli"
-        ogDescription="Dr. Bharathi V, gynaecologist and fertility specialist in Mandaveli, Chennai. IVF, IUI, PCOS, tube block and miscarriage care. Book a consultation."
+        ogTitle="Dr. Bharathi. V – Gynaecologist & Fertility Specialist, Mandaveli"
+        ogDescription="Dr. Bharathi. V, gynaecologist and fertility specialist in Mandaveli, Chennai. IVF, IUI, PCOS, tube block and miscarriage care. Book a consultation."
         ogType="website"
         image="/og-image.png"
-        imageAlt="Dr. Bharathi V - Bharati Fertility & Women Center"
+        imageAlt="Dr. Bharathi. V - Bharati Fertility & Women Center"
         schema={clinicSchema}
       />
 

@@ -314,7 +314,7 @@ export default function OvulationCalculator() {
             >
               <img
                 src="/images/Dr. Bharathi_Logo.png"
-                alt="Dr. Bharathi V"
+                alt="Dr. Bharathi. V"
                 className="h-[66px] w-auto max-w-[155px] object-contain"
               />
             </Link>
@@ -1035,7 +1035,7 @@ export default function OvulationCalculator() {
         <footer className="relative z-10 mt-10 border-t border-pink-100 bg-white/90 px-4 py-7 text-center">
           <img
             src="/images/Dr. Bharathi_Logo.png"
-            alt="Dr. Bharathi V"
+            alt="Dr. Bharathi. V"
             className="mx-auto mb-3 h-14 w-auto max-w-[140px] object-contain"
           />
 

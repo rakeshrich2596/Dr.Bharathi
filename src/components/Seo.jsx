@@ -21,7 +21,7 @@ export default function Seo({
 
   // Social sharing image
   image = "/og-image.png",
-  imageAlt = "Dr. Bharathi V - Bharati Fertility & Women Center",
+  imageAlt = "Dr. Bharathi. V - Bharati Fertility & Women Center",
 
   // Structured data
   schema = null,

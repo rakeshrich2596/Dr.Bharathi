@@ -100,8 +100,8 @@ export default function Hero() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-slate-800 sm:text-4xl lg:text-[43px] xl:text-[46px]">
-            Dr. Bharathi V – Gynaecologist &amp; Fertility Specialist in{" "}
+          <h1 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-slate-800 sm:text-4xl lg:text-[43px] xl:text-[40px]">
+            Dr. Bharathi. V – Gynaecologist &amp; Fertility Specialist in{" "}
             <span className="text-[#0875C9]">
               Mandaveli, Chennai
             </span>
@@ -111,7 +111,7 @@ export default function Hero() {
           <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
             Expert care for every stage of a woman's life, from periods, PCOS
             and pregnancy to laparoscopic surgery and fertility treatment.
-            Get personalised guidance from Dr. Bharathi V and her team.
+            Get personalised guidance from Dr. Bharathi. V and her team.
           </p>
 
           {/* CTA Buttons */}
@@ -195,7 +195,7 @@ export default function Hero() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-slate-900/75 via-slate-900/20 to-transparent px-5 pb-16 pt-24 sm:px-7 sm:pb-20">
 
               <p className="text-xl font-bold text-white sm:text-2xl">
-                Dr. Bharathi V
+                Dr. Bharathi. V
               </p>
 
               <p className="mt-1 text-xs text-white/90 sm:text-sm">

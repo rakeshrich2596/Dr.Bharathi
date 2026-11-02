@@ -75,7 +75,7 @@ export default function WhenToConsult() {
               Some changes in your reproductive health are temporary,
               while others need medical assessment. If something
               concerns you, or you have been trying to conceive without
-              success, a consultation with Dr. Bharathi V can help find
+              success, a consultation with Dr. Bharathi. V can help find
               the cause and the right next step.
             </p>
 
