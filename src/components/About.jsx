@@ -54,10 +54,10 @@ export default function About() {
         <div className="mx-auto mb-10 max-w-4xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-rose-600 sm:text-sm">
             <HeartPulse size={16} />
-            About Dr. V. Bharathi
+            About Dr. Bharathi. V
           </span>
           <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
-            Meet Dr. V. Bharathi
+            Meet Dr. Bharathi. V
           </h2>
           <p className="mt-2 text-lg font-semibold text-cyan-800 sm:text-xl">
             Senior Obs &amp; Gynaecologist | Fertility consultant & laparoscopic surgeon in Chennai
@@ -73,7 +73,7 @@ export default function About() {
               <div className="overflow-hidden rounded-[1.55rem] bg-white">
                 <img
                   src="/images/about2.png"
-                  alt="Dr. V. Bharathi"
+                  alt="Dr. Bharathi. V"
                   className="h-[450px] w-full object-cover object-top sm:h-[550px] lg:h-[620px]"
                   loading="lazy"
                 />
@@ -110,7 +110,7 @@ export default function About() {
 
               <div className="space-y-4 text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-7">
                 <p>
-                  Dr. V. Bharathi has a professional background in obstetrics,
+                  Dr. Bharathi. V has a professional background in obstetrics,
                   gynaecology and reproductive medicine, with additional
                   training in laparoscopic surgery.
                 </p>
@@ -123,7 +123,7 @@ export default function About() {
                 </p>
                 <p>
                   As Medical Director of Bharati Fertility Center, located in
-                  Mandaveli, Chennai, Dr. V. Bharathi&apos;s stated approach
+                  Mandaveli, Chennai, Dr. Bharathi. V&apos;s stated approach
                   emphasises evidence-based practice, ethical treatment and
                   detailed patient counselling.
                 </p>
@@ -171,7 +171,7 @@ export default function About() {
                 href="#medical-expertise"
                 className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C92855] px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-rose-200/70 transition hover:-translate-y-0.5 hover:bg-[#ad2048] sm:w-auto"
               >
-                Explore Dr. V. Bharathi&apos;s Expertise
+                Explore Dr. Bharathi. V&apos;s Expertise
                 <ArrowRight size={18} />
               </a>
             </div>

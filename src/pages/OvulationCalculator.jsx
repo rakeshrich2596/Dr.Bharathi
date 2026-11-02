@@ -259,7 +259,7 @@ export default function OvulationCalculator() {
 
     if (sendWhatsApp) {
       const message = [
-        `Hello Dr. V. Bharathi's team, my name is ${fullName.trim()}.`,
+        `Hello Dr. Bharathi. V's team, my name is ${fullName.trim()}.`,
         `My estimated ovulation date is ${formatDate(results.ovulation)}.`,
         `My estimated fertile window is ${formatDate(results.fertileStart)} to ${formatDate(results.fertileEnd)}.`,
         `My next expected period is ${formatDate(results.nextPeriod)}.`,
@@ -289,7 +289,7 @@ export default function OvulationCalculator() {
   return (
     <>
       <Seo
-        title="Ovulation & Fertility Calculator | Dr. V. Bharathi, Chennai"
+        title="Ovulation & Fertility Calculator | Dr. Bharathi. V, Chennai"
         description="Estimate your fertile window and expected ovulation date with this ovulation calculator. For irregular periods or PCOS, consult a qualified healthcare professional."
         path="/ovulation-calculator"
       />
@@ -321,7 +321,7 @@ export default function OvulationCalculator() {
 
             <div className="hidden items-center gap-2 rounded-full border border-pink-200 bg-gradient-to-r from-pink-50 to-cyan-50 px-4 py-2 text-sm md:flex">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              <span className="font-bold text-[#C92855]">Dr. V. Bharathi</span>
+              <span className="font-bold text-[#C92855]">Dr. Bharathi. V</span>
               <span className="text-slate-300">|</span>
               <span className="text-slate-600">
                 Women's Health & Fertility Care
@@ -1040,11 +1040,11 @@ export default function OvulationCalculator() {
           />
 
           <p className="text-sm font-semibold text-[#064F63]">
-            Dr. V. Bharathi · Women's Health & Fertility Care
+            Dr. Bharathi. V · Women's Health & Fertility Care
           </p>
 
           <p className="mt-2 text-xs leading-5 text-slate-500">
-            © {new Date().getFullYear()} Dr. V. Bharathi. For educational
+            © {new Date().getFullYear()} Dr. Bharathi. V. For educational
             purposes only. Consult your healthcare professional for medical
             advice.
           </p>
